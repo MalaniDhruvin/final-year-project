@@ -25,7 +25,7 @@ const LoginPage = () => {
           response.data.userData.entity_type == "upper_management" ||
           response.data.userData.entity_type == "lower_management"
         ) {
-          window.location.href = "/insight";
+          window.location.href = "/insights";
         } else {
           window.location.href = "/insert-data";
         }
@@ -73,11 +73,23 @@ const LoginPage = () => {
         <div className="form-container">
           <form className="form"  method="post" onSubmit={handleLoginForm}>
             <label htmlFor="Emial">Username or email address</label>
-            <input type="email" name="Email" required
-              className="input" />
+            <input
+              type="email"
+              name="email"
+              className="input"
+              onChange={getInfo}  
+            />
+            {/* <input type="email" name="Email" required
+              className="input" /> */}
             <label htmlFor="password" >Password</label>
-            <input type="password" name="Password" required
-              className="input" />
+            <input
+              type="password"
+              name="password"
+              className="input"
+              onChange={getInfo}
+            />
+            {/* <input type="password" name="Password" required
+              className="input" /> */}
             <a className="forgot" href="#">Forgot password?</a>
             <div className="button">
               {/* <Link to="insight" className="Link"><button className="login">Login</button></Link> */}
