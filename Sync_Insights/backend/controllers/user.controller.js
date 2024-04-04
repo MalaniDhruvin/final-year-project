@@ -1,9 +1,9 @@
-const user = require("../models/user.model");
+const User = require("../models/user.model");
 
 exports.userLogin = async(req, res) => {
     try {
         const { email, password } = req.body;
-        const isUser = await user.findOne({
+        const isUser = await User.findOne({
             $and: [{
                     email: email,
                 },

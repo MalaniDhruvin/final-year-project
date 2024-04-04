@@ -4,15 +4,21 @@ function Insert_user() {
   return (
     <div className='act-user'>
         <div className='user-add'>
-            <input type="text" name="username" placeholder="Username"/>
-            <input type="text" name="Id" placeholder="UserId"/>
-            <select name="department" id="">
-              <option value="Tech">Tech</option>
-              <option value="Tech">Marketing</option>
-              <option value="Tech">HR</option>
-              <option value="Tech">Design</option>
+            <input type="text" name="fullname" placeholder="fullname"/>
+            <input type="text" name="username" placeholder="username"/>
+            <input type="text" name="email" placeholder="email"/>
+            <select name="department" id="department">
+              <option value="Sales">Sales</option>
+              <option value="Finance">Finance</option>
+              <option value="hOperationsr">Operations</option>
             </select>
-            <input type="text" name="role" placeholder="role"/>
+            <select name="position" id="position">
+              <option value="Manager">Manager</option>
+              <option value="Associate">Associate</option>
+              <option value="Analyst">Analyst</option>
+            </select>            
+            <input type="text" name="password" placeholder="password"/>
+            {/* <input type="text" name="role" placeholder="role"/> */}
             <button>Add User</button>
         </div>
     </div>
