@@ -26,7 +26,7 @@ const userModel = new mongoose.Schema({
     },
     department: {
         type: String,
-        enum: ["tech", "hr", "marketing", "design"],
+        enum: ["Finance", "Sales", "Operations"],
     },
     // phone: {
     //     type: String,
