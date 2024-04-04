@@ -24,7 +24,7 @@ const LoginPage = () => {
           // response.data.userData.entity_type == "owner" ||
           // response.data.userData.entity_type == "upper_management" ||
           // response.data.userData.entity_type == "lower_management"
-          response.data.userData.position == "Manager"
+          response.data.data.position == "Manager"
         ) {
           window.location.href = "/insights";
         } else {
