@@ -8,6 +8,8 @@ import LoginPage from './Components/LoginPage.jsx';
 import Employee from './Components/Employee.jsx';
 import Insert_user from './Components/Insertuser.jsx';
 import DataType from './Components/DataType.jsx';
+import Manager from './Components/Manager.jsx';
+import Manager_insert from './Components/Manager_insert.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +28,11 @@ const router = createBrowserRouter([
       path: '/insights/insert-user',
       element: <Insert_user></Insert_user>
     },{
-      
+      path:'/manager',
+      element:<Manager></Manager>
+    },{
+      path:'/manager/insert-user',
+      element:<Manager_insert></Manager_insert>
     },{
       path:'/manager/datatype',
       element:<DataType></DataType>
