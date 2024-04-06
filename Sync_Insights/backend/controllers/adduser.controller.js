@@ -3,7 +3,7 @@ const ApiResponse = require("../utils/ApiResponse");
 const User = require("../models/user.model");
 const asyncHandler = require("../utils/asyncHandler");
 exports.addUser = asyncHandler(async (req, res) => {
-    const [fullname, username, email, department, position, password] = req.body
+    const {fullname, username, email, department, position, password} = req.body
 
     if (
         [fullname, username, email, department, position, password].some((field) => field?.trim() === "")

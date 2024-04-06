@@ -8,7 +8,7 @@ const userModel = new mongoose.Schema({
     //     type: String,
     //     enum: ["owner", "upper_management", "lower_management", "employee"],
     // },
-    name: {
+    fullname: {
         type: String,
     },
     username: {
