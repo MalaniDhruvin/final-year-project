@@ -26,6 +26,8 @@ const router = createBrowserRouter([
       path: '/insights/insert-user',
       element: <Insert_user></Insert_user>
     },{
+      
+    },{
       path:'/manager/datatype',
       element:<DataType></DataType>
     }]
