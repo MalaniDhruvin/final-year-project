@@ -3,7 +3,7 @@ import { InsertUser } from "../Global/apiCall";
 import './Insertuser.css'
 
 function Manager_insert() {
-    const [insertUser, setinsertUser] = useState({ fullname: "", username: "", email: "", department: "", position: "", password: "" });
+    const [insertUser, setinsertUser] = useState({ fullname: "", username: "", email: "", department: "Sales", position: "", password: "" });
 
     const getInfo = (i) => {
       console.log(i.target.name, i.target.value);
@@ -14,7 +14,7 @@ function Manager_insert() {
         .then((response) => {
           console.log(response.data);
           alert("User registered successfully!");
-          setinsertUser({ fullname: "", username: "", email: "", department: "", position: "", password: "" });
+          setinsertUser({ fullname: "", username: "", email: "", department: "Sales", position: "", password: "" });
         })
         .catch((error) => {
           // Handle error
@@ -28,14 +28,10 @@ function Manager_insert() {
         <input type="text" name="fullname" placeholder="fullname" onChange={getInfo} />
         <input type="text" name="username" placeholder="username" onChange={getInfo} />
         <input type="email" name="email" placeholder="email" onChange={getInfo} />
-        <select name="department" onChange={getInfo} id="department">
-          {/* <option value="Sales">Sales</option>
-          <option value="Finance">Finance</option>
-          <option value="Operations">Operations</option> */}
-
-        </select>
+       <input type="text" readOnly value={insertUser.department} name="department" id="department" onChange={getInfo} />
         <select name="position" id="position" onChange={getInfo} >
           {/* <option value="Manager">Manager</option> */}
+          <option value="" aria-readonly>Select Position</option>
           <option value="Associate">Associate</option>
           <option value="Analyst">Analyst</option>
         </select>
