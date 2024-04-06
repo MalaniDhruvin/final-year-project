@@ -8,7 +8,7 @@ function Insert_user() {
     console.log(i.target.name, i.target.value);
     setinsertUser({ ...insertUser, [i.target.name]: i.target.value });
   };
-  const handleInsertUser = (e) => {
+  const handleInsertUser = () => {
     InsertUser(insertUser)
       .then((response) => {
         console.log(response.data);
@@ -28,13 +28,13 @@ function Insert_user() {
             <input type="text" name="username" placeholder="username" onChange={getInfo} />
             <input type="email" name="email" placeholder="email" onChange={getInfo} />
             <select name="department" onChange={getInfo}  id="department">
-              <option value="Sales">Sales</option>
               <option value="Finance">Finance</option>
+              <option value="Sales">Sales</option>
               <option value="Operations">Operations</option>
             </select>
             <select name="position" id="position" onChange={getInfo} >
-              <option value="Manager">Manager</option>
               <option value="Associate">Associate</option>
+              <option value="Manager">Manager</option>
               <option value="Analyst">Analyst</option>
             </select>            
             <input type="password" name="password" placeholder="password" onChange={getInfo} />
