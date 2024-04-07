@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 5000;
+const cookieParser = require("cookie-parser");
 
 require("./utils/db");
 
@@ -29,6 +30,8 @@ app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Credentials", true);
     next();
 });
+
+app.use(cookieParser());
 app.use("/api", require("./routes/index"))
 
 app.listen(PORT, () => {

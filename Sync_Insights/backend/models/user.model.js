@@ -30,6 +30,9 @@ const userModel = new mongoose.Schema({
         type: String,
         enum: ["Finance", "Sales", "Operations"],
     },
+    refreshToken: {
+        type: String,
+    }
     // phone: {
     //     type: String,
     // },
@@ -51,28 +54,28 @@ userModel.methods.isPasswordCorrect = async function(password){
     return await bcrypt.compare(password, this.password)
 }
 
-// userModel.methods.generateAccessToken = function(){
-//     return jwt.sign(
-//         {
-//             _id: this._id
-//         },
-//         process.env.JWT_ACCESS_SECRET,
-//         {
-//             expiresIn: process.env.JWT_ACCESS_EXPIRY
-//         }
-//     )
-// }
-// userModel.methods.generateRefreshToken = function(){
-//     return jwt.sign(
-//         {
-//             _id: this._id
-//         },
-//         process.env.JWT_REFRESH_SECRET,
-//         {
-//             expiresIn: process.env.JWT_REFRESH_EXPIRY
-//         }
-//     )
-// }
+userModel.methods.generateAccessToken = function(){
+    return jwt.sign(
+        {
+            _id: this._id
+        },
+        process.env.JWT_ACCESS_SECRET,
+        {
+            expiresIn: process.env.JWT_ACCESS_EXPIRY
+        }
+    )
+}
+userModel.methods.generateRefreshToken = function(){
+    return jwt.sign(
+        {
+            _id: this._id
+        },
+        process.env.JWT_REFRESH_SECRET,
+        {
+            expiresIn: process.env.JWT_REFRESH_EXPIRY
+        }
+    )
+}
 
 const User = mongoose.model("User", userModel);
 module.exports = User;
