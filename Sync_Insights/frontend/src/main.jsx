@@ -33,10 +33,7 @@ const router = createBrowserRouter([
     },{
       path:'/manager/insert-user',
       element:<Manager_insert></Manager_insert>
-    },{
-      path:'/manager/datatype',
-      element:<DataType></DataType>
-    }]
+    },]
   }
 ])
 
