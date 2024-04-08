@@ -1,11 +1,10 @@
 import React from 'react'
-import HeaderEmp from './HeaderEmp'
-import Header from './Header'
+import Header_Manager from './Header_Manager'
 
 function Manager() {
   return (
-    <Header />
+    <Header_Manager />
   )
 }
 
-export default Manager
+export default Manager;

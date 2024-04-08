@@ -5,7 +5,7 @@ import user from './user.jpg'
 import {Link} from 'react-router-dom'
 import DataType from "./DataType";
 
-function Header() {
+function Header_Manager() {
     const [showUserContainer, setShowUserContainer] = useState(false);
     const handleUserCLick = () => {
         // Set the state to true to show the Data container
@@ -45,7 +45,7 @@ function Header() {
                         <img src={logo} alt="Sync Insights" />
                     </div>
                     <div className="content">
-                        <button className='import' onClick={handleButtonClick}>Insert Data</button>
+                        <button className='import' onClick={handleButtonClick}>Add Fields</button>
                         <button className='sync' onClick={handleSyncButton}>Sync Insights</button>
                         <Link to="/manager/insert-user"><button className="import">Insert user</button></Link>
                     </div>
@@ -70,7 +70,7 @@ function Header() {
                         <IoMdClose className="closebtn" onClick={handleclose} />
                     </div>
                     <div className="content-container">
-                        
+                        <DataType></DataType>
                     </div>
                 </div>
             )}
@@ -88,4 +88,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Header_Manager;
