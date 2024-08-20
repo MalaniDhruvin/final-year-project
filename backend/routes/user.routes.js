@@ -5,8 +5,8 @@ const router = express.Router();
 const {verifyUser} = require("../middlewares/auth.middleware.js");
 const { credentials } = require("../controllers/usercredentials.controller.js");
 router.post("/login", userLogin);
-router.post("/adduser", verifyUser, addUser); 
-router.post("/logout", verifyUser, userLogout);
-router.post("/credentials", verifyUser, credentials);
+router.post("/adduser", addUser); 
+router.post("/logout", userLogout);
+router.post("/credentials", credentials);
 
 module.exports = router;
