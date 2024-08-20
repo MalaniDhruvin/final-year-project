@@ -1,11 +1,12 @@
-import { IoMenu } from "react-icons/io5";
+
 import { IoMdClose } from "react-icons/io";
 import { FaRegCopyright } from "react-icons/fa6";
-import logo from './logo.jpg';
+// import logo from './logo.jpg';
 import { Link } from "react-router-dom";
-import './LoginPage.css';
+import '../style/LoginPage.css';
 import { useState } from "react";
 import { loginUser } from "../Global/apiCall";
+import Navbar from "./Navbar";
 
 
 const LoginPage = () => {
@@ -26,9 +27,9 @@ const LoginPage = () => {
           // response.data.userData.entity_type == "lower_management"
           response.data.data.position == "Manager"
         ) {
-          window.location.href = "/insights";
+          window.location.href = "/manager";
         } else {
-          window.location.href = "/insert-data";
+          window.location.href = "/insights";
         }
       })
       .catch((error) => {
@@ -39,46 +40,18 @@ const LoginPage = () => {
 
   return (
     <div className="main-container-login">
-      {/* <div className="nav-container">
-        <div className="logo-container">
-          <img src={logo} alt="Sync Insights" />
-        </div>
-        <div className="last-container">
-          <ul>
-            <IoMdClose className="Close" />
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Pricing</a></li>
-          </ul>
-        </div>
-        <input type="checkbox" id="check" />
-        <label for="check" className="checkbtn"><IoMenu className="menu" /></label>
-      </div> */}
-
-      <nav>
-        <input type="checkbox" id="check" name="" value="" />
-        <label for="check" id="checkbtn"><IoMenu className="menu" /></label>
-        <img src={logo} alt="SyncInsights" className="logo" />
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Pricing</a></li>
-        </ul>
-
-      </nav>
-
       <div className="login-container">
         <div className="Name-container">
-          <h1 className="name">Sync Insights</h1>
+          <h2 className="name">Log in</h2>
         </div>
         <div className="form-container">
-          <form className="form"  method="post" onSubmit={handleLoginForm}>
+          <form className="form" method="post" onSubmit={handleLoginForm}>
             <label htmlFor="Emial">Username or email address</label>
             <input
               type="email"
               name="email"
               className="input"
-              onChange={getInfo}  
+              onChange={getInfo}
             />
             {/* <input type="email" name="Email" required
               className="input" /> */}
@@ -99,6 +72,9 @@ const LoginPage = () => {
 
           </form>
         </div>
+      </div>
+      <div className="login-image-container">
+        <img src="login.png" width={500} alt="" />
       </div>
 
       {/* <footer className="last">

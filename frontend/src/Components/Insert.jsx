@@ -1,4 +1,4 @@
-import './Insert.css';
+import '../style/Insert.css';
 function Insert() {
 
     return (

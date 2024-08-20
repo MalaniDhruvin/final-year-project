@@ -1,4 +1,4 @@
-import './Afterlogin.css';
+import '../style/Afterlogin.css';
 import Header from './Header';
 const Afterlogin = () => {
 

@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import logo from './logo.jpg';
-import user from './user.jpg'
-import {Link} from 'react-router-dom'
-import DataType from "./DataType";
+import Insert from "./Insert";
 
-function Header_Manager() {
+function HeaderEmp() {
     const [showUserContainer, setShowUserContainer] = useState(false);
     const handleUserCLick = () => {
         // Set the state to true to show the Data container
@@ -42,16 +39,15 @@ function Header_Manager() {
             <div className="navbar">
                 <div className="logo-content">
                     <div className="logo">
-                        <img src={logo} alt="Sync Insights" />
+                        <img src='logo.jpg'  alt="Sync Insights" />
                     </div>
                     <div className="content">
-                        <button className='import' onClick={handleButtonClick}>Add Fields</button>
+                        <button className='import' onClick={handleButtonClick}>Insert</button>
                         <button className='sync' onClick={handleSyncButton}>Sync Insights</button>
-                        <Link to="/manager/insert-user"><button className="import">Insert user</button></Link>
                     </div>
                 </div>
                 <div className="profile">
-                    <img src={user} onClick={handleUserCLick} className="user" alt="User Profile" />
+                    <img src='user.jpg'  onClick={handleUserCLick} className="user" alt="User Profile" />
                 </div>
             </div>
             {showUserContainer && (
@@ -65,13 +61,11 @@ function Header_Manager() {
                 </div>
             )}
              {showDataContainer && (
-                <div className='click-container'>
+                <div className='click-container1'>
                     <div className="close-container">
                         <IoMdClose className="closebtn" onClick={handleclose} />
                     </div>
-                    <div className="content-container">
-                        <DataType></DataType>
-                    </div>
+                    <Insert />
                 </div>
             )}
              {showSyncContainer && (
@@ -88,4 +82,4 @@ function Header_Manager() {
     )
 }
 
-export default Header_Manager;
+export default HeaderEmp;

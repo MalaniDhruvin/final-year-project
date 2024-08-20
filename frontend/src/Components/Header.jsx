@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import logo from './logo.jpg';
-import user from './user.jpg'
 import {Link} from 'react-router-dom'
 import DataType from "./DataType";
 
@@ -42,16 +40,16 @@ function Header() {
             <div className="navbar">
                 <div className="logo-content">
                     <div className="logo">
-                        <img src={logo} alt="Sync Insights" />
+                        <img src='logo.jpg' alt="Sync Insights" />
                     </div>
                     <div className="content">
                         <button className='import' onClick={handleButtonClick}>Insert Data</button>
                         <button className='sync' onClick={handleSyncButton}>Sync Insights</button>
-                        <Link to="/manager/insert-user"><button className="import">Insert user</button></Link>
+                        <Link to="/insights/insert-user"><button className="import">Insert user</button></Link>
                     </div>
                 </div>
                 <div className="profile">
-                    <img src={user} onClick={handleUserCLick} className="user" alt="User Profile" />
+                    <img src='user.jpg'  onClick={handleUserCLick} className="user" alt="User Profile" />
                 </div>
             </div>
             {showUserContainer && (

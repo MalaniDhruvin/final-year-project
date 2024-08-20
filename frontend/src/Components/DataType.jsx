@@ -1,5 +1,5 @@
 import React from 'react'
-import './Datatype.css'
+import '../style/Datatype.css'
 function DataType() {
   return (
         <div className='datype'>

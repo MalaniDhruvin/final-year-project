@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { InsertUser } from "../Global/apiCall";
-import './Insertuser.css'
+import '../style/InsertUser.css'
 
 function Manager_insert() {
     const [insertUser, setinsertUser] = useState({ fullname: "", username: "", email: "", department: "Sales", position: "", password: "" });
