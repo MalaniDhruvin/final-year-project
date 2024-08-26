@@ -10,13 +10,15 @@ import Insert_user from './Components/Insertuser.jsx';
 import DataType from './Components/DataType.jsx';
 import Manager from './Components/Manager.jsx';
 import Manager_insert from './Components/Manager_insert.jsx';
+import Sidebar from './Components/Sidebar.jsx';
+import ManagerModule from './Components/ManagerModule.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/', element: <App />,
     children: [{
       path: '/insights',
-      element: <Afterlogin />,
+      element: <ManagerModule/>,
     },
     {
       path: '/',
