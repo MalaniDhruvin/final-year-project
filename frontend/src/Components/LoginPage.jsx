@@ -29,7 +29,7 @@ const LoginPage = () => {
         ) {
           window.location.href = "/manager";
         } else {
-          window.location.href = "/insights";
+          window.location.href = "/insights/dashboard";
         }
       })
       .catch((error) => {

@@ -12,13 +12,18 @@ import Manager from './Components/Manager.jsx';
 import Manager_insert from './Components/Manager_insert.jsx';
 import Sidebar from './Components/Sidebar.jsx';
 import ManagerModule from './Components/ManagerModule.jsx';
+import Analytics from './Components/Analytics.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/', element: <App />,
     children: [{
-      path: '/insights',
+      path: '/insights/dashboard',
       element: <ManagerModule/>,
+    },
+    {
+      path: '/insights/analytics',
+        element:<Analytics />
     },
     {
       path: '/',
