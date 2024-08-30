@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import '../style/LoginPage.css';
 import { useState } from "react";
 import { loginUser } from "../Global/apiCall";
-import Navbar from "./Navbar";
 
 
 const LoginPage = () => {

@@ -1,10 +1,10 @@
 import React from 'react'
-import Sidebar from './Sidebar'
+// import Sidebar from './Sidebar'
 
 const Analytics = () => {
   return (
     <div style={{display:'flex',backgroundColor:'#F7F7F8'}}>
-        <Sidebar />
+        {/* <Sidebar /> */}
         <p>Under Development</p>
     </div>
   )
