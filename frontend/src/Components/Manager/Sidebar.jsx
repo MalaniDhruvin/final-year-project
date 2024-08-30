@@ -17,7 +17,7 @@ const Sidebar = () => {
     //     { img: <IoIosNotifications style={{ fontSize: '20px' }} />, text: 'Notification', path: '/insights/notification' },
     //     { img: <IoSettings style={{ fontSize: '20px' }} />, text: 'Setting', path: '/insights/setting' },
     // ];
-    const item = [{ img: <BiSolidDashboard style={{ fontSize: '20px' }} />, text: 'Employees', path: '/insights/dashboard' }, { img: <FaCalendarAlt style={{ fontSize: '20px' }} />, text: 'Calendar', path: '/insights/calendar' }, { img: <FaFileInvoiceDollar style={{ fontSize: '20px' }} />, text: 'Schedule', path: '/insights/invoice' }, { img: <IoSettings style={{ fontSize: '20px' }} />, text: 'Setting', path: '/insights/setting' },]
+    const item = [{ img: <BiSolidDashboard style={{ fontSize: '20px' }} />, text: 'Employees', path: '/insights/dashboard' }, { img: <FaCalendarAlt style={{ fontSize: '20px' }} />, text: 'Calendar', path: '/insights/calendar' }, { img: <FaFileInvoiceDollar style={{ fontSize: '20px' }} />, text: 'Schedule', path: '/insights/schedule' }, { img: <IoSettings style={{ fontSize: '20px' }} />, text: 'Setting', path: '/insights/setting' },]
     return (
         <div className="sidebar-container">
             <div className="sidebarmenu">

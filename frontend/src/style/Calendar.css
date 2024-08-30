@@ -2,6 +2,7 @@
   width: 900px;
   margin: 20px auto;
   margin-top: 65px;
+  padding: 0 15px;
   /* border: 1px solid #ccc; */
   border-radius: 10px;
   overflow: hidden;
@@ -93,4 +94,23 @@
   position: absolute;
   left: 250px;
   top: 22px;
+}
+
+.create-event{
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  width: 500px;
+  padding: 15px 20px;
+  height: max-content;
+  margin: 0 10px;
+  margin-top: 65px;
+  background-color: #ffffff;
+}
+
+.event-header{
+  /* border: 1px solid black; */
+  padding: 20px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

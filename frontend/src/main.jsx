@@ -7,17 +7,22 @@ import LoginPage from './Components/LoginPage.jsx';
 import ManagerModule from './Components/Manager/ManagerModule.jsx';
 import Analytics from './Components/Analytics.jsx';
 import Calendar from './Components/Manager/Calendar.jsx';
+import Schedule from './Components/Manager/Schedule.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/', element: <App />,
     children: [{
       path: '/insights/dashboard',
-      element: <ManagerModule/>,
+      element: <ManagerModule />,
     },
     {
       path: '/insights/calendar',
-        element:<Calendar />
+      element: <Calendar />
+    },
+    {
+      path:'/insights/schedule',
+      element:<Schedule />
     },
     {
       path: '/',

@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
+import { IoMdClose } from "react-icons/io";
 import '../../style/Calendar.css';
 import Sidebar from './Sidebar';
 
 const Calendar = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
+    const [task, setTask] = useState(false);
+
+    const handleTask = (day) => {
+        setTask(!task);
+    }
 
     const renderHeader = () => {
         const monthName = currentDate.toLocaleString('default', { month: 'long' });
@@ -51,7 +57,7 @@ const Calendar = () => {
         // Fill in the actual days of the current month
         for (let day = 1; day <= daysInMonth; day++) {
             daysArray.push(
-                <div key={day} className="calendar-cell">
+                <div key={day} onClick={() => handleTask(day)} className="calendar-cell">
                     <span>{day}</span>
                 </div>
             );
@@ -82,11 +88,19 @@ const Calendar = () => {
     return (<div style={{ display: 'flex', background: '#fafafb', position: 'relative' }}>
         <Sidebar></Sidebar>
         <h4 className='calendar-h4'>Calendar</h4>
+        {task && (<div className='create-event'>
+            <div className="event-header">
+                <p style={{ fontSize: '20px', fontWeight: '500' }}>Create an Event</p>
+                <IoMdClose onClick={()=>handleTask()} style={{ fontSize: '35px', borderRadius: '15px', padding: '4px 0', marginTop: '-12px', cursor: 'pointer', color: '#ee5d6f', backgroundColor: 'fef3f6' }} />
+            </div>
+        </div>)}
+
         <div className="calendar">
             {renderHeader()}
             {renderDays()}
             {renderCells()}
         </div>
+
     </div>
     );
 };

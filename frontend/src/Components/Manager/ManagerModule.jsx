@@ -163,7 +163,8 @@ const ManagerModule = () => {
 
                     </div>
                 </div>
-            </div> : <><div className="manager-content-container">
+            </div> : <>
+            <div className="manager-content-container">
                 <div className="manager-header-content">
                     <h4>Employees</h4>
                     <button onClick={handleEmployee} style={{ display: 'flex', alignItems: 'center', gap: '4px', padding: '4px 10px', border: 'none', color: 'white', backgroundColor: '#605BFF', borderRadius: '10px' }}><IoAddOutline style={{ color: 'white' }} />Add Employee</button>
