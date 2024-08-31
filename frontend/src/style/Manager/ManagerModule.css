@@ -139,9 +139,11 @@
 }
 
 .employee-form input {
-    border: 1px solid #9a9a9a;
+    /* border: 1px solid #9a9a9a; */
+    border: none;
     border-radius: 5px;
     padding: 4px;
+    background-color: #F7F7F8;
 }
 
 .employee-form button {

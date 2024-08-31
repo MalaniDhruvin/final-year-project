@@ -6,7 +6,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { GoClockFill } from "react-icons/go";
 import { FaLocationDot } from "react-icons/fa6";
 
-const Schedule = () => {
+const ScheduleEmp = () => {
     const data = [{ date: '12/08/2024', time: '10:10 AM', location: 'Surat' },
     { date: '12/08/2024', time: '10:10 AM', location: 'Surat' },
     { date: '12/08/2024', time: '10:10 AM', location: 'Surat' }, { date: '12/08/2024', time: '10:10 AM', location: 'Surat' }, { date: '12/08/2024', time: '10:10 AM', location: 'Surat' }, { date: '12/08/2024', time: '10:10 AM', location: 'Surat' }, { date: '12/08/2024', time: '10:10 AM', location: 'Surat' }, { date: '12/08/2024', time: '10:10 AM', location: 'Surat' }, { date: '12/08/2024', time: '10:10 AM', location: 'Surat' }, { date: '12/08/2024', time: '10:10 AM', location: 'Surat' }, { date: '12/08/2024', time: '10:10 AM', location: 'Surat' }, { date: '12/08/2024', time: '10:10 AM', location: 'Surat' }, { date: '12/08/2024', time: '10:10 AM', location: 'Surat' }, { date: '12/08/2024', time: '10:10 AM', location: 'Surat' }, { date: '12/08/2024', time: '10:10 AM', location: 'Surat' },
@@ -61,4 +61,4 @@ const Schedule = () => {
     )
 }
 
-export default Schedule;
+export default ScheduleEmp;
