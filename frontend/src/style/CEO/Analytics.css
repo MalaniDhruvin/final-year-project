@@ -1,0 +1,27 @@
+.analytics-content-container{
+    display: flex;
+    background-color: #f7f7f8;
+    width: 100%;
+    /* border: 1px solid black ; */
+}
+
+.analytics-container{
+    display: flex;
+    padding: 20px 30px;
+    justify-content: space-between;
+    width: 100%;
+    height: max-content;
+    /* border: 1px solid black; */
+}
+
+.date-container{
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 10px;
+}
+
+.date-container input{
+    border: none;
+    padding: 6px;
+    border-radius: 10px;
+}

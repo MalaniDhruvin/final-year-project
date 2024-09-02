@@ -6,11 +6,12 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LoginPage from './Components/LoginPage.jsx';
 import ManagerModule from './Components/Manager/ManagerModule.jsx';
 import Calender from './Components/Employee/Calender.jsx';
-import Analytics from './Components/Analytics.jsx';
+import Analytics from './Components/CEO/Analytics.jsx';
 import Calendar from './Components/Manager/Calendar.jsx';
 import Schedule from './Components/Manager/Schedule.jsx';
 import Task from './Components/Employee/Task.jsx';
 import ScheduleEmp from './Components/Employee/ScheduleEmp.jsx';
+import Dashboard from './Components/CEO/Dashboard.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,9 +33,15 @@ const router = createBrowserRouter([
     }, {
       path: '/employee/calendar',
       element: <Calender />
+    }, {
+      path: '/employee/schedule',
+      element: <ScheduleEmp />
+    }, {
+      path: '/ceo/dashboard',
+      element: <Dashboard />
     },{
-      path:'/employee/schedule',
-      element:<ScheduleEmp />
+      path:'/ceo/analytics',
+      element:<Analytics />
     },
     {
       path: '/',
